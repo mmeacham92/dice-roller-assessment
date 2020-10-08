@@ -4,20 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dice Roller Assessment</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/stylesheets/style.css" />
   </head>
   <body>
-    <input type="number" id="numDice" placeholder="# of dice to roll:"/>
-    <button id="rollButton">Roll!</button>
-    <p>Total Score: <span id="totalScore"></span></p>
+    <div class="container">
+      <div id="form">
+        <label for="numDice"></label>
+        <input type="number" id="numDice" placeholder="# of dice to roll" />
+        <label for="numSides"></label>
+        <input type="number" id="numSides" placeholder="Max roll value (default: 6)" />
+        <button id="rollButton">Roll!</button>
+        <p id="error"></p>
+      </div>
 
-    <div id="rollDiv">
+      <p>Total Score: <span id="totalScore"></span></p>
+
+      <div id="rollDiv">
         <button id="showRolls">Show All Rolls</button>
-        <ol id="rollsList">
-
-        </ol>
+        <ol id="rollsList"></ol>
+      </div>
     </div>
 
+    <img id="background" src="./assets/images/background-image.jpg" />
     <script src="./assets/javascript/main.js"></script>
   </body>
 </html>
